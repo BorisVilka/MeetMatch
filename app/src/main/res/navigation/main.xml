@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    app:startDestination="@id/startFragment">
+
+    <fragment
+        android:id="@+id/startFragment"
+        android:name="com.meetmatch.app.StartFragment"
+        android:label="fragment_start"
+        tools:layout="@layout/fragment_start" >
+        <action
+            android:id="@+id/action_startFragment_to_photoFragment"
+            app:destination="@id/photoFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+    </fragment>
+    <fragment
+        tools:layout="@layout/fragment_photo"
+        android:id="@+id/photoFragment"
+        android:name="com.meetmatch.app.PhotoFragment"
+        android:label="PhotoFragment" >
+        <action
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"
+            android:id="@+id/action_photoFragment_to_fragmentDate"
+            app:destination="@id/fragmentDate" />
+    </fragment>
+    <fragment
+        tools:layout="@layout/fragment_date"
+        android:id="@+id/fragmentDate"
+        android:name="com.meetmatch.app.FragmentDate"
+        android:label="FragmentDate" >
+        <action
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"
+            android:id="@+id/action_fragmentDate_to_fragmentGender"
+            app:destination="@id/fragmentGender" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentGender"
+        android:name="com.meetmatch.app.FragmentGender"
+        android:label="fragment_gender"
+        tools:layout="@layout/fragment_gender" >
+        <action
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"
+            android:id="@+id/action_fragmentGender_to_fragmentMeet"
+            app:destination="@id/fragmentMeet" />
+    </fragment>
+    <fragment
+        tools:layout="@layout/fragment_meet"
+        android:id="@+id/fragmentMeet"
+        android:name="com.meetmatch.app.FragmentMeet"
+        android:label="FragmentMeet" >
+        <action
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"
+            android:id="@+id/action_fragmentMeet_to_fragmentPurpose"
+            app:destination="@id/fragmentPurpose" />
+    </fragment>
+    <fragment
+        tools:layout="@layout/fragment_purpose"
+        android:id="@+id/fragmentPurpose"
+        android:name="com.meetmatch.app.FragmentPurpose"
+        android:label="FragmentPurpose" >
+        <action
+            android:id="@+id/action_fragmentPurpose_to_fragmentLast"
+            app:destination="@id/fragmentLast" />
+    </fragment>
+    <fragment
+        tools:layout="@layout/fragment_last"
+        android:id="@+id/fragmentLast"
+        android:name="com.meetmatch.app.FragmentLast"
+        android:label="FragmentLast" />
+</navigation>
